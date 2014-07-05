@@ -9,7 +9,7 @@ $hour = date("G\hi");
 // Version "
 echo "Nous somme le $date et il est $hour <br>"; 
 // Version ' et concaténation
-echo 'Nous somme le '.$date." et il est ".$hour;
+echo 'Nous somme le '.$date." et il est ".$hour.'<br>';
 
 echo 'rempli le formulaire pour des heures de fun !';
 ?>
@@ -19,6 +19,7 @@ Nom : <input type="text" name ="nom"><br>
 Prénom : <input type="text" name="prénom"><br>
 Titre : <input type="text" name="titre"><br>
 url : <input type="text" name="url"><br>
+Votre email : <input type="text" name="email"> <br>
 <input type="submit" value="OK">
 </form>
 

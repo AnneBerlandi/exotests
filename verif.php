@@ -4,6 +4,7 @@ $nom = $_POST['nom'];
 $prenom = $_POST['prénom'];
 $titre = $_POST['titre'];
 $url = $_POST['url'];
+$email = $_POST['email'];
 ?>
 
 <title> <?php 
@@ -12,7 +13,7 @@ echo 'salut '.$prenom.' !'; ?>
 
 <body>
 <?php
-if(empty($titre)||empty($url)||empty($nom)||empty($prenom)){
+if(empty($titre)||empty($url)||empty($nom)||empty($prenom)||empty($email)){
 	echo "reviens quand tu sauras remplir un formulaire !<br>";
 }
 
@@ -35,7 +36,15 @@ else {
 	else{
 		echo $titre.'<br>';
 		echo $url.'<br>';
-		}
+	}
+	
+	$verifaro = strpos($email,"@");
+	$verifpoint = strpos($email,".");
+	
+	if($verifaro == '' || $verifpoint == ''){
+		echo "email non valide sale kéké <br>";
+	}
+	else echo $email.'<br>';
 }
 ?>
 </body>
