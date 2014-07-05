@@ -1,3 +1,7 @@
+<?php 
+Require("Fonctions.php");
+?>
+
 <html>
 
 <title> Hello world </title>
@@ -32,10 +36,11 @@ echo "vous savez quoi ?<br> $ligne <br>";
 $file = fopen("Visiteur.txt","r+");
 $ligne = fgets($file,11);
 $ligne = $ligne + 1;
-echo "Il y a eu : $ligne visiteurs depuis le début de cet exercice !";
+Arial("5","red","Il y a eu : $ligne visiteurs depuis le début de cet exercice !");
 fseek($file,0);
 fputs($file,$ligne);
 fclose($file);
+
 ?>
 
 </body>
