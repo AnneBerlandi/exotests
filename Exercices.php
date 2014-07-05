@@ -23,6 +23,21 @@ Votre email : <input type="text" name="email"> <br>
 <input type="submit" value="OK">
 </form>
 
+<?php
+$file = fopen("Essai.txt","r");
+$ligne = fgets($file,255);
+fclose($file);
+echo "vous savez quoi ?<br> $ligne <br>";
+
+$file = fopen("Visiteur.txt","r+");
+$ligne = fgets($file,11);
+$ligne = $ligne + 1;
+echo "Il y a eu : $ligne visiteurs depuis le début de cet exercice !";
+fseek($file,0);
+fputs($file,$ligne);
+fclose($file);
+?>
+
 </body>
 
 </html>
